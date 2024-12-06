@@ -22,7 +22,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        $dosens = Dosen::all(); // Ambil data dosen untuk dropdown
+        $dosens = Dosen::all(); 
         return view('mahasiswa.create', compact('dosens'));
     }
 
@@ -48,7 +48,7 @@ class MahasiswaController extends Controller
      */
     public function show(Mahasiswa $mahasiswa)
     {
-    dd($mahasiswa->dosen); // Memastikan apakah data dosen sudah dimuat
+    dd($mahasiswa->dosen); 
     return view('mahasiswa.show', compact('mahasiswa'));
     }
 
@@ -58,7 +58,7 @@ class MahasiswaController extends Controller
      */
     public function edit(Mahasiswa $mahasiswa)
     {
-        $dosens = Dosen::all(); // Ambil data dosen untuk dropdown
+        $dosens = Dosen::all();
         return view('mahasiswa.edit', compact('mahasiswa', 'dosens'));
     }
 
